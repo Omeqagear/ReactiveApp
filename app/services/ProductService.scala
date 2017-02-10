@@ -50,7 +50,7 @@ class ProductService extends IProductService{
     if(entry == null) throw new RuntimeException("Could not Product: "+ id)
   }
 
-  def findAllProduct(): Seq[(String, String)] ={
+  def findAllProducts(): Seq[(String, String)] ={
     val products: Seq[(String, String)] = this
       .findAll()
       .getOrElse(List(Product(Some(0), "", "", 0)))
